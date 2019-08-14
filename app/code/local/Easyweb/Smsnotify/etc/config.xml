@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * EasyWeb SMS Notify
+ *
+ *
+ * @category    Easyweb
+ * @package     Easyweb_Smsnotify
+ * @copyright   Copyright (c) 2014 EasyWeb. (http://easyweb.org.ua)
+ */
+-->
+<config>
+    <modules>
+        <Easyweb_Smsnotify>
+            <version>1.0.1</version>
+        </Easyweb_Smsnotify>
+    </modules>
+    <global>
+        <models>
+            <easyweb_smsnotify>
+                <class>Easyweb_Smsnotify_Model</class>
+            </easyweb_smsnotify>
+        </models>
+        <helpers>
+            <easyweb_smsnotify>
+                <class>Easyweb_Smsnotify_Helper</class>
+            </easyweb_smsnotify>
+        </helpers>
+    </global>
+    <default>
+        <easywebsmsnotify>
+            <general>
+                <enabled>0</enabled>
+                <text>New order is placed in your shop. # %ORDER_ID%, amount %AMOUNT% $</text>
+                <esputnik_sender>Test</esputnik_sender>
+            </general>
+        </easywebsmsnotify>
+    </default>
+    <frontend>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <easyweb_smsnotify>
+                        <class>easyweb_smsnotify/observer</class>
+                        <method>sendNotifyToAdminAfterPlaceOrder</method>
+                    </easyweb_smsnotify>
+                </observers>
+            </sales_order_place_after>
+        </events>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Easyweb_Smsnotify>
+                    <files>
+                        <default>Easyweb_Smsnotify.csv</default>
+                    </files>
+                </Easyweb_Smsnotify>
+            </modules>
+        </translate>
+    </adminhtml>
+</config>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * EasyWeb
+ *
+ *
+ * @category    Easyweb
+ * @package     Easyweb_Smsnotify
+ * @copyright   Copyright (c) 2014 EasyWeb. (http://easyweb.org.ua)
+ */
+-->
+<config>
+    <modules>
+        <Easyweb_Smsnotify>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Easyweb_Smsnotify>
+    </modules>
+</config>

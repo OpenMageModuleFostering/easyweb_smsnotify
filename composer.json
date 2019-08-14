@@ -1,0 +1,17 @@
+{
+    "name": "OpenMageModuleFostering/Easyweb_Smsnotify",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License-(GPL)",
+    "homepage": "",
+    "description": "SMS Notifications about new orders.
+Supports only Ukrainian providers",
+    "authors": [
+    {
+        "name": "Artem Kruzhalin",
+        "email": "artem@easyweb.org.ua"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

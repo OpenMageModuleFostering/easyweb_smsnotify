@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * EasyWeb SMS Notify
+ *
+ *
+ * @category    Easyweb
+ * @package     Easyweb_Smsnotify
+ * @copyright   Copyright (c) 2014 EasyWeb. (http://easyweb.org.ua)
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <easywebsmsnotify module="easyweb_smsnotify" translate="label">
+                                        <title>Sms Notify</title>
+                                        <sort_order>50</sort_order>
+                                    </easywebsmsnotify>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

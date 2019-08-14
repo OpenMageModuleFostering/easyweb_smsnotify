@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * EasyWeb SMS Notify
+ *
+ *
+ * @category    Easyweb
+ * @package     Easyweb_Smsnotify
+ * @copyright   Copyright (c) 2014 EasyWeb. (http://easyweb.org.ua)
+ */
+-->
+<config>
+    <tabs>
+        <easyweb>
+            <label>EasyWeb</label>
+            <sort_order>1</sort_order>
+        </easyweb>
+    </tabs>
+    <sections>
+        <easywebsmsnotify translate="label">
+            <label>SMS Notify</label>
+            <tab>easyweb</tab>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <fields>
+                        <enabled>
+                            <label>Enable SMS Notify</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </enabled>
+                        <provider>
+                            <label>Select SMS Provider</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <source_model>easyweb_smsnotify/source_provider</source_model>
+                            <show_in_default>1</show_in_default>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </provider>
+                        <store_phone>
+                            <label>Store Phone Number</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </store_phone>
+                        <text>
+                            <label>Message Text</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <comment>You can use %ORDER_ID%, %AMOUNT</comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </text>
+                        <!-- Turbosms settings -->
+                        <turbosms_sender>
+                            <label>Sender</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <depends>
+                                <provider>turbosms</provider>
+                            </depends>
+                        </turbosms_sender>
+                        <turbosms_login>
+                            <label>Login</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <comment>Login for gateway, not for account</comment>
+                            <depends>
+                                <provider>turbosms</provider>
+                            </depends>
+                        </turbosms_login>
+                        <turbosms_password>
+                            <label>Password</label>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <comment>Password for gateway, not for account</comment>
+                            <depends>
+                                <provider>turbosms</provider>
+                            </depends>
+                        </turbosms_password>
+                        <!-- eSputnik settings -->
+                        <esputnik_sender>
+                            <label>Sender</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <comment>Test by default. You can add new name on esputnik.com.ua</comment>
+                            <depends>
+                                <provider>esputnik</provider>
+                            </depends>
+                        </esputnik_sender>
+                        <esputnik_login>
+                            <label>Login</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <depends>
+                                <provider>esputnik</provider>
+                            </depends>
+                        </esputnik_login>
+                        <esputnik_password>
+                            <label>Password</label>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <depends>
+                                <provider>esputnik</provider>
+                            </depends>
+                        </esputnik_password>
+                    </fields>
+                </general>
+            </groups>
+        </easywebsmsnotify>
+    </sections>
+</config>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<package>
+    <name>Easyweb_Smsnotify</name>
+    <version>1.0.1</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/GPL-3.0">GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>SMS Notifications about new orders.&#xD;
+Supports only Ukrainian providers</summary>
+    <description>&lt;p&gt;This extension is able to send SMS messages to administrator of the shop  when customer placed new order.&lt;br /&gt;For using this extension you should be registered on one of supported SMS providers&#xD;
+&lt;br /&gt;&#xD;
+SMS notification module integrated with the Ukrainian SMS providers&lt;/p&gt;&#xD;
+&lt;p&gt;&#xD;
+List of features:&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Notifications of new order&lt;/li&gt;&#xD;
+&lt;li&gt;Ukrainian SMS Providers&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+Supporting providers:&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;TurboSMS (UA)&lt;/li&gt;&#xD;
+&lt;li&gt;eSputnik (UA)&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/p&gt;&#xD;
+&lt;p&gt;Plans for future: more providers, check balance, use few providers, send sms to customers, notification of order status, sms to many customers.&lt;/p&gt;&#xD;
+&lt;hr /&gt;&#xD;
+&lt;p&gt;&#x42D;&#x442;&#x43E;&#x442; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x435;&#x442; &#x43E;&#x442;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x44F;&#x442;&#x44C; &#x421;&#x41C;&#x421; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x430;&#x434;&#x43C;&#x438;&#x43D;&#x438;&#x441;&#x442;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x443; &#x43C;&#x430;&#x433;&#x430;&#x437;&#x438;&#x43D;&#x430;, &#x43A;&#x43E;&#x433;&#x434;&#x430; &#x43F;&#x43E;&#x43A;&#x443;&#x43F;&#x430;&#x442;&#x435;&#x43B;&#x44C; &#x440;&#x430;&#x437;&#x43C;&#x435;&#x441;&#x442;&#x438;&#x43B; &#x43D;&#x43E;&#x432;&#x44B;&#x439; &#x437;&#x430;&#x43A;&#x430;&#x437;&#xD;
+&lt;br /&gt;&#x414;&#x43B;&#x44F; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F; &#x432;&#x44B; &#x434;&#x43E;&#x43B;&#x436;&#x43D;&#x44B; &#x431;&#x44B;&#x442;&#x44C; &#x437;&#x430;&#x440;&#x435;&#x433;&#x438;&#x441;&#x442;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x44B; &#x43D;&#x430; &#x441;&#x430;&#x439;&#x442;&#x435; &#x445;&#x43E;&#x442;&#x44F; &#x431;&#x44B; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x437; &#x43F;&#x43E;&#x434;&#x434;&#x435;&#x440;&#x436;&#x438;&#x432;&#x430;&#x435;&#x43C;&#x44B;&#x445; &#x43F;&#x440;&#x43E;&#x432;&#x430;&#x439;&#x434;&#x435;&#x440;&#x43E;&#x432; &#x421;&#x41C;&#x421;&#xD;
+&lt;br /&gt;&#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; &#x421;&#x41C;&#x421; &#x443;&#x432;&#x435;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x439; &#x438;&#x43D;&#x442;&#x435;&#x433;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D; &#x441; &#x443;&#x43A;&#x440;&#x430;&#x438;&#x43D;&#x441;&#x43A;&#x438;&#x43C;&#x438; &#x421;&#x41C;&#x421; &#x43F;&#x440;&#x43E;&#x432;&#x430;&#x439;&#x434;&#x435;&#x440;&#x430;&#x43C;&#x438;&lt;/p&gt;&#xD;
+&lt;p&gt;&#xD;
+&#x421;&#x43F;&#x438;&#x441;&#x43E;&#x43A; &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x43E;&#x441;&#x442;&#x435;&#x439;:&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&#x423;&#x432;&#x435;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43E; &#x43D;&#x43E;&#x432;&#x43E;&#x43C; &#x437;&#x430;&#x43A;&#x430;&#x437;&#x435;&lt;/li&gt;&#xD;
+&lt;li&gt;&#x41F;&#x43E;&#x434;&#x434;&#x435;&#x440;&#x436;&#x43A;&#x430; &#x443;&#x43A;&#x440;&#x430;&#x438;&#x43D;&#x441;&#x43A;&#x438;&#x445; &#x43F;&#x440;&#x43E;&#x432;&#x430;&#x439;&#x434;&#x435;&#x440;&#x43E;&#x432; &#x421;&#x41C;&#x421;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&#xD;
+&#x41F;&#x43E;&#x434;&#x434;&#x435;&#x440;&#x436;&#x438;&#x432;&#x430;&#x435;&#x43C;&#x44B;&#x435; &#x43F;&#x440;&#x43E;&#x432;&#x430;&#x439;&#x434;&#x435;&#x440;&#x44B;:&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;TurboSMS (UA)&lt;/li&gt;&#xD;
+&lt;li&gt;eSputnik (UA)&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/p&gt;&#xD;
+&lt;p&gt;&#x41F;&#x43B;&#x430;&#x43D;&#x44B; &#x43D;&#x430; &#x431;&#x443;&#x434;&#x443;&#x449;&#x435;&#x435;: &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x435; &#x43F;&#x440;&#x43E;&#x432;&#x430;&#x439;&#x434;&#x435;&#x440;&#x43E;&#x432;, &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x43A;&#x430; &#x431;&#x430;&#x43B;&#x430;&#x43D;&#x441;&#x430;, &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x43D;&#x435;&#x441;&#x43A;&#x43E;&#x43B;&#x44C;&#x43A;&#x438;&#x445; &#x43F;&#x440;&#x43E;&#x432;&#x430;&#x439;&#x434;&#x435;&#x440;&#x43E;&#x432;, &#x43E;&#x442;&#x43F;&#x440;&#x430;&#x432;&#x43A;&#x430; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x44F; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44E;, &#x443;&#x432;&#x435;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x431; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x438;&#x438; &#x441;&#x442;&#x430;&#x442;&#x443;&#x441;&#x430; &#x437;&#x430;&#x43A;&#x430;&#x437;&#x430;, &#x43E;&#x442;&#x43F;&#x440;&#x430;&#x432;&#x43A;&#x430; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x44F; &#x43D;&#x435;&#x441;&#x43A;&#x43E;&#x43B;&#x44C;&#x43A;&#x438;&#x43C; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;&#x43C;.&lt;/p&gt;&#xD;
+</description>
+    <notes>Added new provider</notes>
+    <authors><author><name>Artem Kruzhalin</name><user>kruzhalin</user><email>artem@easyweb.org.ua</email></author></authors>
+    <date>2014-03-24</date>
+    <time>11:57:58</time>
+    <contents><target name="magelocal"><dir name="Easyweb"><dir name="Smsnotify"><dir name="Helper"><file name="Data.php" hash="fd3e1e1a4cf2f69f4722d8863f1d3095"/></dir><dir name="Model"><file name="Observer.php" hash="bf11592b20f68828aafbef2f953c9146"/><dir name="Provider"><file name="Abstract.php" hash="3af24fba92e1ebd39810efcf0332378b"/><file name="Esputnik.php" hash="8b39fdb6a034d05c4c685ea7d9ede5be"/><file name="Turbosms.php" hash="8e4ec09425804fe0128caa3b3acaa4d7"/></dir><dir name="Source"><file name="Provider.php" hash="7b42afe9fd8a55793ba407100ad520ef"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="0dacac551e86f6524b96ed199d92c088"/><file name="config.xml" hash="119a1b31d98d57f0491011d569474509"/><file name="system.xml" hash="d7340c459343e96ba241ed46535e5afc"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Easyweb_Smsnotify.xml" hash="9c6f0c4de23e20c87491dd4972e13c1b"/></dir></target><target name="magelocale"><dir name="ru_RU"><file name="Easyweb_Smsnotify.csv" hash="855a9e38297735853e3183a0dc08bf84"/></dir><dir name="en_US"><file name="Easyweb_Smsnotify.csv" hash="c50e090eba6380d96704a0a07b2f6698"/></dir><dir name="uk_UA"><file name="Easyweb_Smsnotify.csv" hash="661b849b767f0306a093cd9d53c86873"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

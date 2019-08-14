@@ -12,10 +12,15 @@
 <config>
     <modules>
         <Easyweb_Smsnotify>
-            <version>1.0.1</version>
+            <version>1.0.3</version>
         </Easyweb_Smsnotify>
     </modules>
     <global>
+        <blocks>
+            <easyweb_smsnotify>
+                <class>Easyweb_Smsnotify_Block</class>
+            </easyweb_smsnotify>
+        </blocks>
         <models>
             <easyweb_smsnotify>
                 <class>Easyweb_Smsnotify_Model</class>
@@ -59,4 +64,15 @@
             </modules>
         </translate>
     </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <easyweb_smsnotify before="Mage_Adminhtml">Easyweb_Smsnotify_Adminhtml</easyweb_smsnotify>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config>

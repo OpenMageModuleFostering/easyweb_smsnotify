@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EasyWeb SmsNotify
  *
@@ -7,7 +8,6 @@
  * @package     Easyweb_Smsnotify
  * @copyright   Copyright (c) 2014 EasyWeb. (http://easyweb.org.ua)
  */
-
 class Easyweb_Smsnotify_Model_Provider_Esputnik extends Easyweb_Smsnotify_Model_Provider_Abstract
 {
     /**
@@ -20,8 +20,42 @@ class Easyweb_Smsnotify_Model_Provider_Esputnik extends Easyweb_Smsnotify_Model_
      * Api url
      * @var string
      */
-    protected $_url = 'https://esputnik.com.ua/api/v1/message/sms';
+    protected $_urlSendSms = 'http://esputnik.com.ua/api/v1/message/sms';
+    protected $_urlBalance = 'http://esputnik.com.ua/api/v1/balance';
 
+    /**
+     * @return resource
+     */
+    protected function _getAuthCurlObject()
+    {
+        $login = $this->getConfigField('login');
+        $password = $this->getConfigField('password');
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json'));
+        curl_setopt($ch, CURLOPT_USERPWD, $login . ':' . $password);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        return $ch;
+    }
+
+    /**
+     * @param $ch
+     * @return mixed
+     */
+    protected function _getResponse($ch)
+    {
+        $output = curl_exec($ch);
+        if ($output === FALSE) {
+            $this->_addErrorMessage($ch);
+        } else {
+            return $output;
+        }
+        curl_close($ch);
+
+        return false;
+    }
 
     /**
      * Send sms when order is placed
@@ -32,30 +66,36 @@ class Easyweb_Smsnotify_Model_Provider_Esputnik extends Easyweb_Smsnotify_Model_
      */
     public function sendOrderSms($orderId, $amount)
     {
-        $login = $this->getConfigField('login');
-        $password = $this->getConfigField('password');
-
         $json_value = new stdClass();
         $json_value->text = $this->getTextMessage($orderId, $amount);
         $json_value->from = $this->getSender();
         $json_value->phoneNumbers = array($this->getStorePhone());
 
-        $ch = curl_init();
+        $ch = $this->_getAuthCurlObject();
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($json_value));
         curl_setopt($ch, CURLOPT_HEADER, 1);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json;charset=utf-8'));
-        curl_setopt($ch, CURLOPT_URL, $this->_url);
-        curl_setopt($ch, CURLOPT_USERPWD, $login . ':' . $password);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($json_value));
+        curl_setopt($ch, CURLOPT_URL, $this->_urlSendSms);
+        return $this->_getResponse($ch);
+    }
 
-        $output = curl_exec($ch);
-        curl_close($ch);
+    /**
+     * @return mixed
+     */
+    public function checkBalance()
+    {
+        $ch = $this->_getAuthCurlObject();
+        curl_setopt($ch, CURLOPT_URL, $this->_urlBalance);
+        $response = $this->_getResponse($ch);
 
-        if ($output === FALSE) {
-            $this->_addErrorMessage($ch);
+        $response = json_decode($response);
+
+        $output = $response->currentBalance . ' ' . $response->currency;
+        if ($response->bonusSmses) {
+            $output .= '<br />(Bonus SMS: ' . $response->bonusSmses . ')';
         }
 
-        return;
+
+        return $output;
     }
 }

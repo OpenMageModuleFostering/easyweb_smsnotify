@@ -1,4 +1,5 @@
 <?php
+
 /**
  * EasyWeb SmsNotify
  *
@@ -7,7 +8,6 @@
  * @package     Easyweb_Smsnotify
  * @copyright   Copyright (c) 2014 EasyWeb. (http://easyweb.org.ua)
  */
-
 class Easyweb_Smsnotify_Model_Observer
 {
     /**
@@ -18,20 +18,13 @@ class Easyweb_Smsnotify_Model_Observer
      */
     public function sendNotifyToAdminAfterPlaceOrder($observer)
     {
-
         $helper = Mage::helper('easyweb_smsnotify');
-
-        if (!$helper->isSmsEnabled()) {
-            return $this;
-        }
-
         $order = $observer->getOrder();
 
         $orderId = $order->getIncrementId();
         $amount = $order->getGrandTotal();
 
-        $provider = $helper->getProvider();
-        $providerModel = Mage::getModel('easyweb_smsnotify/provider_' . $provider);
+        $providerModel = $helper->getProviderModel();
         if ($providerModel) {
             $providerModel->sendOrderSms($orderId, $amount);
         }

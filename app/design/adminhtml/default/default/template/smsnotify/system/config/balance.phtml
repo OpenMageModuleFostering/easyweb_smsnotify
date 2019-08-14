@@ -1,0 +1,55 @@
+<?php
+/**
+ * EasyWeb SmsNotify
+ *
+ *
+ * @category    Easyweb
+ * @package     Easyweb_Smsnotify
+ * @copyright   Copyright (c) 2014 EasyWeb. (http://easyweb.org.ua)
+ */
+?>
+<?php
+/**
+ * @see Easyweb_Smsnotify_Block_Adminhtml_System_Config_Balance
+ */
+?>
+<script type="text/javascript">
+    //<![CDATA[
+    function checkBalance() {
+        var elem = $('<?php echo $this->getHtmlId() ?>');
+        var provider = $('easywebsmsnotify_general_provider').value;
+
+        params = {
+            provider: provider,
+            login: $('easywebsmsnotify_general_'+provider+'_login'),
+            password: $('easywebsmsnotify_general_'+provider+'_password')
+        };
+
+        new Ajax.Request('<?php echo $this->getAjaxUrl() ?>', {
+            parameters: params,
+            onSuccess: function(response) {
+                button = '<?php echo $this->__('Error!') ?>';
+                try {
+                    response = response.responseText;
+                    if (response !== '') {
+                        button = '<?php echo $this->__('Success!') ?>';
+                        elem.removeClassName('fail').addClassName('success')
+                        $('check_balance_result').update('<?php echo  $this->__('Your balance is:');?>'+' <strong>'+response+'</strong>');
+                    } else {
+                        elem.removeClassName('success').addClassName('fail');
+                        $('check_balance_result').update('');
+                    }
+                } catch (e) {
+                    elem.removeClassName('success').addClassName('fail')
+                    $('check_balance_result').update('');
+                }
+                $('check_balance_result_button').update(button);
+            }
+        });
+    }
+    //]]>
+</script>
+<button onclick="javascript:checkBalance(); return false;" class="scalable" type="button" id="<?php echo $this->getHtmlId() ?>">
+    <span id="check_balance_result_button"><?php echo $this->escapeHtml($this->getButtonLabel()) ?></span>
+</button>
+<span id="check_balance_result"></span>

@@ -37,6 +37,8 @@ abstract class Easyweb_Smsnotify_Model_Provider_Abstract extends Mage_Core_Model
 
     abstract public function sendOrderSms($orderId, $amount);
 
+    abstract public function checkBalance();
+
     /**
      * Get field with provider prefix
      *
@@ -84,7 +86,7 @@ abstract class Easyweb_Smsnotify_Model_Provider_Abstract extends Mage_Core_Model
      */
     protected function _logMessages()
     {
-        Mage::log(implode("\n", $this->_messages));
+        Mage::log(implode("\n", $this->_messages),null,'sms.log');
         return $this;
     }
 

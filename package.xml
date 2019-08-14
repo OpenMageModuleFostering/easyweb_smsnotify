@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package>
     <name>Easyweb_Smsnotify</name>
-    <version>1.0.1</version>
+    <version>1.0.3</version>
     <stability>stable</stability>
-    <license uri="http://opensource.org/licenses/GPL-3.0">GNU General Public License (GPL)</license>
+    <license uri="http://opensource.org/licenses/gpl-license.php">GNU General Public License</license>
     <channel>community</channel>
     <extends/>
     <summary>SMS Notifications about new orders.&#xD;
@@ -15,6 +15,7 @@ SMS notification module integrated with the Ukrainian SMS providers&lt;/p&gt;&#x
 List of features:&#xD;
 &lt;ul&gt;&#xD;
 &lt;li&gt;Notifications of new order&lt;/li&gt;&#xD;
+&lt;li&gt;Balance info&lt;/li&gt;&#xD;
 &lt;li&gt;Ukrainian SMS Providers&lt;/li&gt;&#xD;
 &lt;/ul&gt;&#xD;
 Supporting providers:&#xD;
@@ -33,6 +34,7 @@ Supporting providers:&#xD;
 &lt;ul&gt;&#xD;
 &lt;li&gt;&#x423;&#x432;&#x435;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43E; &#x43D;&#x43E;&#x432;&#x43E;&#x43C; &#x437;&#x430;&#x43A;&#x430;&#x437;&#x435;&lt;/li&gt;&#xD;
 &lt;li&gt;&#x41F;&#x43E;&#x434;&#x434;&#x435;&#x440;&#x436;&#x43A;&#x430; &#x443;&#x43A;&#x440;&#x430;&#x438;&#x43D;&#x441;&#x43A;&#x438;&#x445; &#x43F;&#x440;&#x43E;&#x432;&#x430;&#x439;&#x434;&#x435;&#x440;&#x43E;&#x432; &#x421;&#x41C;&#x421;&lt;/li&gt;&#xD;
+&lt;li&gt;&#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x43A;&#x430; &#x431;&#x430;&#x43B;&#x430;&#x43D;&#x441;&#x430;&lt;/li&gt;&#xD;
 &lt;/ul&gt;&#xD;
 &#xD;
 &#x41F;&#x43E;&#x434;&#x434;&#x435;&#x440;&#x436;&#x438;&#x432;&#x430;&#x435;&#x43C;&#x44B;&#x435; &#x43F;&#x440;&#x43E;&#x432;&#x430;&#x439;&#x434;&#x435;&#x440;&#x44B;:&#xD;
@@ -43,11 +45,14 @@ Supporting providers:&#xD;
 &lt;/p&gt;&#xD;
 &lt;p&gt;&#x41F;&#x43B;&#x430;&#x43D;&#x44B; &#x43D;&#x430; &#x431;&#x443;&#x434;&#x443;&#x449;&#x435;&#x435;: &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x435; &#x43F;&#x440;&#x43E;&#x432;&#x430;&#x439;&#x434;&#x435;&#x440;&#x43E;&#x432;, &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x43A;&#x430; &#x431;&#x430;&#x43B;&#x430;&#x43D;&#x441;&#x430;, &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x43D;&#x435;&#x441;&#x43A;&#x43E;&#x43B;&#x44C;&#x43A;&#x438;&#x445; &#x43F;&#x440;&#x43E;&#x432;&#x430;&#x439;&#x434;&#x435;&#x440;&#x43E;&#x432;, &#x43E;&#x442;&#x43F;&#x440;&#x430;&#x432;&#x43A;&#x430; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x44F; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44E;, &#x443;&#x432;&#x435;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x431; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x438;&#x438; &#x441;&#x442;&#x430;&#x442;&#x443;&#x441;&#x430; &#x437;&#x430;&#x43A;&#x430;&#x437;&#x430;, &#x43E;&#x442;&#x43F;&#x440;&#x430;&#x432;&#x43A;&#x430; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x44F; &#x43D;&#x435;&#x441;&#x43A;&#x43E;&#x43B;&#x44C;&#x43A;&#x438;&#x43C; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;&#x43C;.&lt;/p&gt;&#xD;
 </description>
-    <notes>Added new provider</notes>
-    <authors><author><name>Artem Kruzhalin</name><user>kruzhalin</user><email>artem@easyweb.org.ua</email></author></authors>
-    <date>2014-03-24</date>
-    <time>11:57:58</time>
-    <contents><target name="magelocal"><dir name="Easyweb"><dir name="Smsnotify"><dir name="Helper"><file name="Data.php" hash="fd3e1e1a4cf2f69f4722d8863f1d3095"/></dir><dir name="Model"><file name="Observer.php" hash="bf11592b20f68828aafbef2f953c9146"/><dir name="Provider"><file name="Abstract.php" hash="3af24fba92e1ebd39810efcf0332378b"/><file name="Esputnik.php" hash="8b39fdb6a034d05c4c685ea7d9ede5be"/><file name="Turbosms.php" hash="8e4ec09425804fe0128caa3b3acaa4d7"/></dir><dir name="Source"><file name="Provider.php" hash="7b42afe9fd8a55793ba407100ad520ef"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="0dacac551e86f6524b96ed199d92c088"/><file name="config.xml" hash="119a1b31d98d57f0491011d569474509"/><file name="system.xml" hash="d7340c459343e96ba241ed46535e5afc"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Easyweb_Smsnotify.xml" hash="9c6f0c4de23e20c87491dd4972e13c1b"/></dir></target><target name="magelocale"><dir name="ru_RU"><file name="Easyweb_Smsnotify.csv" hash="855a9e38297735853e3183a0dc08bf84"/></dir><dir name="en_US"><file name="Easyweb_Smsnotify.csv" hash="c50e090eba6380d96704a0a07b2f6698"/></dir><dir name="uk_UA"><file name="Easyweb_Smsnotify.csv" hash="661b849b767f0306a093cd9d53c86873"/></dir></target></contents>
+    <notes>Balance info&#xD;
+Fix issues with eSputnik provider&#xD;
+&#xD;
+</notes>
+    <authors><author><name>Artem Kruzhalin</name><user>EasyWeb_UA</user><email>artem@easyweb.org.ua</email></author></authors>
+    <date>2014-11-05</date>
+    <time>17:13:34</time>
+    <contents><target name="magelocal"><dir name="Easyweb"><dir name="Smsnotify"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Config"><file name="Balance.php" hash="916c1a7348818d73cf10080e8709db2f"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="5d75fa9ed70e8c7b68bb215e5b139e2e"/></dir><dir name="Model"><file name="Observer.php" hash="ea0bc16fbc35bb64dc773018636a66d9"/><dir name="Provider"><file name="Abstract.php" hash="07ecd781e758901208731083ef88d13a"/><file name="Esputnik.php" hash="ab46165ec500b9118e7f2efc29234972"/><file name="Turbosms.php" hash="abf00df0ba296df442f83ae8c54cc606"/></dir><dir name="Source"><file name="Provider.php" hash="3d78e3f1480db24c499682b0e167c950"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Config"><file name="BalanceController.php" hash="8dd5b3dd80dbf3974143b25eb3bc0554"/></dir></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="3febe7f1c4ab64ec2ec586cb8189d07f"/><file name="config.xml" hash="d5d9dd2ff89153ab077273874a989e54"/><file name="system.xml" hash="ab61fd7b71aa74fcab0f48061f37d990"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Easyweb_Smsnotify.xml" hash="cc03671bbc4017389c86cadd9a260ab8"/></dir></target><target name="magelocale"><dir name="ru_RU"><file name="Easyweb_Smsnotify.csv" hash="b097a56212d7653ee8ac79a97ec1bbfc"/></dir><dir name="uk_UA"><file name="Easyweb_Smsnotify.csv" hash="599e5df3049ce1fa352edae9796eb3ab"/></dir><dir name="en_US"><file name="Easyweb_Smsnotify.csv" hash="683f5fd6cff04031388214823fa2d7cf"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="smsnotify"><dir name="system"><dir name="config"><file name="balance.phtml" hash="f33876a7260e46ba25e147154fc48109"/></dir></dir></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
+    <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

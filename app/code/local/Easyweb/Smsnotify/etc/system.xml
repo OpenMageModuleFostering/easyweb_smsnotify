@@ -95,6 +95,7 @@
                                 <provider>turbosms</provider>
                             </depends>
                         </turbosms_password>
+                        <!-- Turbosms settings end -->
                         <!-- eSputnik settings -->
                         <esputnik_sender>
                             <label>Sender</label>
@@ -124,6 +125,17 @@
                                 <provider>esputnik</provider>
                             </depends>
                         </esputnik_password>
+                        <!-- eSputnik settings end-->
+                        <check_balance>
+                            <label>Check balance</label>
+                            <button_label>Check Balance</button_label>
+                            <frontend_model>easyweb_smsnotify/adminhtml_system_config_balance</frontend_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>>
+                        </check_balance>
                     </fields>
                 </general>
             </groups>

@@ -77,4 +77,10 @@ class Easyweb_Smsnotify_Model_Provider_Turbosms extends Easyweb_Smsnotify_Model_
         }
         return;
     }
+
+    public function checkBalance()
+    {
+        $result = $this->_getAuthClient()->GetCreditBalance();
+        return $result->GetCreditBalanceResult;
+    }
 }
